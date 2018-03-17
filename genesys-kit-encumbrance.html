@@ -5,16 +5,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encumbrance Rules Expansion</title>
-    <meta name="description" content="The Genesys RPG Asciidoc Compilation project is a one-stop-shop for Genesys Roleplaying Game community content based in AsciiDoc.">
+    <title>Encumbrance Rules Expansion Kit</title>
+    <meta name="description" content="Encumbrance Rules Expansion Kit for the Genesys Roleplaying Game">
     <meta name="author" content="Your name goes here">
     <meta name="copyright" content="Maybe consider a Creative Commons license">
     <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
+    <!-- <link rel="stylesheet" href="css/font-awesome.css"> -->
     <link rel="stylesheet" href="css/coderay.css">
     <link rel="stylesheet" href="css/asciidoctor.css">
+    <link rel="stylesheet" href="css/gen.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="js/vendor/modernizr.js"></script>
-    <script src="js/toc.js"></script>
 </head>
 <body>
 
@@ -42,19 +43,20 @@
     <!-- Main Blog Content -->
     <div class="large-9 columns" role="content">
 
-        <div class="sect1">
+        <h1>ENCUMBRANCE RULES EXPANSION KIT</h1>
+<div class="sect1">
 <h2 id="purpose_of_the_expansion">Purpose of the Expansion</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="encumbrance_is_a_tradeoff">Encumbrance Is a Tradeoff</h3>
 <div class="paragraph">
-<p>Do we just use the encumbrance rules as-is, or do we go so deep into the particulars of cargo storage that the idea of using the encumbrance rules makes no sense at all? On the one hand, the encumbrance threshold values can be extremely arbitrary, and likewise the encumbrance value of cargo. On the other, the purpose of abstracting carrying capacity to "encumbrance" is to compress a huge amount of information down to a tiny little package that can easily be handwaved as magic so we can stop talking about mathematics and focus on role-playing.</p>
+<p>Encumrance is a finkicky thing. On the one hand, the encumbrance threshold values can be extremely arbitrary, and likewise the encumbrance value of cargo. On the other, the purpose of abstracting carrying capacity to "encumbrance" is to compress a huge amount of information down to a tiny little package that can easily be handwaved as magic so we can stop talking about mathematics and focus on role-playing. Do we just use the encumbrance rules as-is, or do we go so deep into the particulars of cargo storage that the idea of using the encumbrance rules makes no sense at all? In many cases, a handwave is all that is necessary in a narrative system.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="but_not_a_tradeoff_we_are_happy_about">But Not a Tradeoff We Are Happy About</h3>
 <div class="paragraph">
-<p>But if you&#8217;re playing a smuggler/pirate/shipping crew (and who isn&#8217;t??) then the encumbrance rules as presented leave a lot to be desired. There&#8217;s no rhyme or reason to it, no way to wrestle it into submission, it&#8217;s just something you handwave because, well, that&#8217;s the expectation. Everyone at the table is unhappy with it, but nobody has any better ideas that don&#8217;t dramatically alter the game and create a lot of work.</p>
+<p>But if you&#8217;re playing a smuggler/pirate/shipping crew (and who isn&#8217;t??) then the encumbrance rules as presented leave <em>a lot</em> to be desired. There&#8217;s no rhyme or reason to encumbrance as it is presented. There is no way to wrestle it into submission. It&#8217;s just a game aspect that you handwave because, ultimately, that&#8217;s the game designers' expectation. Everyone at the table is utterly unhappy about it, but nobody has any better ideas that don&#8217;t dramatically alter the game and create <em>a lot of work.</em></p>
 </div>
 </div>
 </div>
@@ -62,6 +64,9 @@
 <div class="sect1">
 <h2 id="a_solution_that_fits_the_genesys_system">A Solution That Fits the Genesys System</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>But what if there&#8217;s a middle ground? What if you can leave the arbitrary values in place, still leave the system more or less abstract, but still get enough crunch to fiddle with that players enjoy it and have some skin in it?</p>
+</div>
 <div class="sect2">
 <h3 id="the_proposal">The Proposal</h3>
 <div class="quoteblock">
@@ -84,18 +89,18 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="task_difficulty">Task Difficulty</h4>
+<h4 id="base_task_difficulty">Base Task Difficulty</h4>
 <div class="paragraph">
-<p>Task Difficulty can be modified for factors such as whether the cargo is crated, how heavy/bulky individual cargo units are, how much cargo there is.</p>
+<p>Starting at normal difficulty, if the cargo encumbrance is 75% of the remaining cargo capacity, then upgrade the base diffulty. If the cargo encumbrance is 90% of the remaining cargo capacity, then upgrade the base diffulty twice. Task Difficulty can be further modified for factors such as whether the cargo is crated/packaged, how heavy/bulky individual cargo units are, and how much cargo there is, according to circumstance.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="task_modifiers">Task Modifiers</h4>
 <div class="paragraph">
-<p>Task difficulty should be upgraded if a minimum number of deckhands are not available to do the task, and lowered if there are twice as many as necessary (if it fits the situation.)</p>
+<p>Upgrade the Task Difficulty (as opposed to adding setback dice) when loading or unloading cargo during a dangerous situation, such as during a firefight, in response to a fire, or as part of an Underway Replenishment. Likewise, life-threateningly dangerous hazmat should also cause an Upgrade.</p>
 </div>
 <div class="paragraph">
-<p>Task difficulty should also be upgraded (as opposed to adding setback dice) for loading or unloading cargo during a dangerous situation, such as during a firefight, in response to a fire, or as part of an Underway Replenishment. Likewise, life-threateningly dangerous hazmat should also cause an Upgrade.</p>
+<p>Add <span class="image"><img src="images/Setback.svg" alt="Setback"></span> if a minimum number of deckhands are not available to do the task, and <span class="image"><img src="images/Boost.svg" alt="Boost"></span> if there are twice as many as necessary (as fits the situation.)</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -104,7 +109,7 @@
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Challenge dice are meant to represent the possibility of <strong>catastrophic events,</strong> where Setback dice are meant to represent the sort of problems that might change the outcome, but by themselves not represent the possibility of catastrophy. The bellwether for whether a Setback should be added or the Difficulty should be upgraded should be in whether the complication <strong>adds danger to the Task.</strong>
+The assumption I use is that Challenge dice are meant to represent the possibility of <strong>catastrophic events,</strong> where Setback dice are meant to represent the sort of problems that might change the outcome, but by themselves not represent the possibility of catastrophy. The bellwether for whether a Setback should be added or the Difficulty should be upgraded should be in whether the complication <strong>adds danger to the Task.</strong>
 </td>
 </tr>
 </table>
@@ -150,7 +155,7 @@ Challenge dice are meant to represent the possibility of <strong>catastrophic ev
 <div class="paragraph">
 <p>Failure indicates an unsuccessful attempt to load the cargo. Each <span class="image"><img src="images/GenesysFailure.svg" alt="GenesysFailure"></span> represents one unit of time wasted. Whether that unit is minutes, days, or hours depends on the circumstances.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all spread genesys">
 <caption class="title">Table 1. Spending Advantage and Triumph</caption>
 <colgroup>
 <col style="width: 50%;">
@@ -169,7 +174,7 @@ Challenge dice are meant to represent the possibility of <strong>catastrophic ev
 </tr>
 </tbody>
 </table>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all spread genesys">
 <caption class="title">Table 2. Spending Threat and Despair</caption>
 <colgroup>
 <col style="width: 50%;">
@@ -192,7 +197,11 @@ Challenge dice are meant to represent the possibility of <strong>catastrophic ev
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="images/GenesysThreat.svg" alt="GenesysThreat"></span><span class="image"><img src="images/GenesysThreat.svg" alt="GenesysThreat"></span><span class="image"><img src="images/GenesysThreat.svg" alt="GenesysThreat"></span> or <span class="image"><img src="images/GenesysDespair.svg" alt="GenesysDespair"></span></p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Destroy one tool used in the action.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="images/GenesysThreat.svg" alt="GenesysThreat"></span><span class="image"><img src="images/GenesysThreat.svg" alt="GenesysThreat"></span><span class="image"><img src="images/GenesysThreat.svg" alt="GenesysThreat"></span> or <span class="image"><img src="images/GenesysDespair.svg" alt="GenesysDespair"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A critical injury occurs to one of the workers. (If the worker is a minion, this results in a death.)</p></td>
 </tr>
 </tbody>
 </table>
@@ -238,7 +247,7 @@ Challenge dice are meant to represent the possibility of <strong>catastrophic ev
         <hr>
         <div class="row">
             <div class="large-12 columns">
-                <p>Footer</p>
+                <p>To each his own.</p>
             </div>
         </div>
     </div>
@@ -246,6 +255,7 @@ Challenge dice are meant to represent the possibility of <strong>catastrophic ev
 
 <script src="js/vendor/jquery.js"></script>
 <script src="js/foundation.min.js"></script>
+<script src="js/toc.js"></script>
 <script>
 $(document).foundation();
 var doc = document.documentElement;

@@ -5,16 +5,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asciidoc Suppliment Compilation For the Genesys Roleplaying System</title>
-    <meta name="description" content="The Genesys RPG Asciidoc Compilation project is a one-stop-shop for Genesys Roleplaying Game community content based in AsciiDoc.">
+    <title>Genesys Asciidoc Tooling</title>
+    <meta name="description" content="A site using AsciiDoc to generate Genesys suppliments.">
     <meta name="author" content="Your name goes here">
     <meta name="copyright" content="Maybe consider a Creative Commons license">
     <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
+    <!-- <link rel="stylesheet" href="css/font-awesome.css"> -->
     <link rel="stylesheet" href="css/coderay.css">
     <link rel="stylesheet" href="css/asciidoctor.css">
+    <link rel="stylesheet" href="css/gen.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="js/vendor/modernizr.js"></script>
-    <script src="js/toc.js"></script>
 </head>
 <body>
 
@@ -42,7 +43,8 @@
     <!-- Main Blog Content -->
     <div class="large-9 columns" role="content">
 
-        <div id="preamble">
+        <h1>Asciidoc Suppliment Compilation For the Genesys Roleplaying System</h1>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>Greetings, Traveller! You&#8217;re here for one of two reasons:</p>
@@ -66,13 +68,16 @@
 <h2 id="how_can_i_use_this_content">How can I use this content?</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Game rules aren&#8217;t copyrightable, per se. However, the wording of those rules can be. We&#8217;re making some reasonable assumptions.</p>
+<p>Game rules aren&#8217;t copyrightable, per se. However, the wording of those rules can be. Even when copyright is involved, there&#8217;s Fair Use. But we also don&#8217;t want to step on Fantasy Flight Games' toes. Therefore, we&#8217;re making some reasonable assumptions.</p>
 </div>
 <div class="paragraph">
-<p>The first is that Fantasy Flight Games is allowing the community to use whatever is posted on or linked in their forums for non-commercial use. If it&#8217;s on their forums, they are fully aware of it. They have the capacity to take down anything on their forums, and to send C&amp;D requests to anything linked on their forums.</p>
+<p>The first is that Fantasy Flight Games is allowing the community to use whatever is posted on or linked in their forums for non-commercial use. The logic is this: if it&#8217;s on their formums or linked on their forums, they are fully aware of it. They have the capacity to take down anything on their forums, and to send C&amp;D requests to anything linked on their forums.</p>
 </div>
 <div class="paragraph">
 <p>The second is that you are using the content for non-commercial use, unless the content is specifically listed with a license that permits otherwise. Where there is an explicit license attached to content, we will specify.</p>
+</div>
+<div class="paragraph">
+<p>In a nutshell, we intend to honor the established (if unwritten) policies regarding community content, and to not violate copyrights. And in turn, that means as long as you do the same, everything should be golden. Until there <em>is</em> written guidance, we&#8217;re proceeding with the understanding that anything that causes community growth without impacting FFG&#8217;s ability to make money from their product is highly (if implicitly) encouraged by them. This is congruent with the precedent FFG has set.</p>
 </div>
 </div>
 </div>
@@ -91,85 +96,32 @@
 <div class="paragraph">
 <p><a href="genesys-kit-encumbrance.html">Genesys Encumbrance Expansion Kit</a></p>
 </div>
+<div class="paragraph">
+<p><a href="genesys-kit-talentlist.html">Genesys Talent List Kit</a></p>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="how_can_i_contribute_can_i_add_my_own_content">How can I contribute? Can I add my own content?</h2>
+<h2 id="what_is_this_witchcraft_and_how_do_i_get_some_of_it">What Is This Witchcraft!? (And how do I get some of it?)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>We&#8217;d <em>love</em> to have your help, and the beautiful thing about using Asciidoc is that <em>anyone can.</em> It&#8217;s just text!</p>
-</div>
-<div class="paragraph">
-<p>Start by forking this repository. That lets you edit the .adoc files right in Github. Once you&#8217;ve made changes, you can submit a pull request to have your changes merged into the repository. And if that&#8217;s enough to get you where you need to be, great! However, it&#8217;s much easier to see your results as you&#8217;re going. For that, you&#8217;ll need a few tools.</p>
-</div>
-<div class="sect2">
-<h3 id="setting_up">Setting up</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>You&#8217;ll need <a href="https://www.ruby-lang.org/en/">Ruby.</a> Ruby is the language that all of the tooling is written in, and so you need to install the Ruby interpreter. Different operating systems have different installation procedures, so find the right instructions for you on the <a href="https://www.ruby-lang.org/en/downloads/">Ruby website.</a></p>
-</li>
-<li>
-<p>You&#8217;ll also need a good text editor, and Notepad isn&#8217;t going to cut it. I recommend <a href="https://code.visualstudio.com/download">Visual Studio Code</a>. All the cool kids are using it. Plus, it has a <a href="https://github.com/joaompinto/asciidoctor-vscode">nice plugin</a> that works really well for Asciidoc.</p>
-</li>
-<li>
-<p>You&#8217;ll need <a href="https://git-scm.com/download/">Git</a> installed on your computer. You can also get one of the many git GUIs, or if you installed Visual Studio Code, it has a Git interface built-in.</p>
-</li>
-<li>
-<p>Open a commandline which has ruby in the path. It&#8217;s straightforward on Linux and Mac; any commandline should have ruby in the path at this point. On windows, hit Start and type <code>Start Command Prompt with Ruby</code>.</p>
-</li>
-<li>
-<p>Install bundle, jekyll, and jekyll-asciidoc with the command, <code>gem install bundle jekyll jekyll-asciidoc</code> ("gem" is a package manager for Ruby.)</p>
-</li>
-<li>
-<p>At this point, you&#8217;re ready to clone the repository. Teaching Git is beyond the scope for this document, but there are tons of resources. Here&#8217;s my favorite: <a href="https://git-scm.com/book/en/v2">Pro Git</a>.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Running a local instance of the site is now easy. To do this, open a commandline, cd to the directory where the local copy of the repository is, run the <code>bundle exec jekyll serve</code> command, and open a web browser to <a href="http://localhost:4000" class="bare">http://localhost:4000</a>. Jekyll will automatically process and host changes to the content. So every time you save an .adoc file, Jekyll updates the site hosted at <a href="http://localhost:4000" class="bare">http://localhost:4000</a>; your changes appear when you refresh your browser.</p>
-</div>
-<div class="paragraph">
-<p>You may also edit your content directly on Github. To do this, navigate the browser the file you wish to edit, click the pensil (edit) button in the upper right hand corner of the view and make your changes. When you&#8217;re finished, commit your changes. This will trigger Travis to generate and publish a new website including your changes.</p>
-</div>
-<div class="paragraph">
-<p>For blog posts, Jekyll will recognize files under the <code>_post</code> directory, parse the name and place it in the list of posts. These will show up under the <code>site.posts</code> variable.</p>
-</div>
-<div class="paragraph">
-<p>To display a list of posts, use Jekyll syntax similar to the following:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="html">{% for post in site.posts limit: 5 %}
-<span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">.{{ post.url }}</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>{{ post.navtitle }}<span class="tag">&lt;/a&gt;</span>
-{% endfor %}</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="update_look_and_feel">Update Look and feel</h3>
-<div class="paragraph">
-<p>The layout provided with the <a href="https://github.com/asciidoctor/jekyll-asciidoc-quickstart">Jekyll AsciiDoc Quickstart</a> project is based on <a href="http://foundation.zurb.com">Foundation</a>, a responsive design css framework. You&#8217;re free to update the layout by editing the <code>_layouts/default.html</code> file and css under the <code>css</code> directory.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="reference_documentation">Reference documentation</h3>
-<div class="paragraph">
-<p>The following links will help with detailed explanations on Jekyll and AsciiDoc.</p>
+<p><a href="tools.html">This handy link</a> explains the "how," but here&#8217;s the "why:"</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="http://jekyllrb.com">Jekyll</a></p>
+<p>Ease. Using this repository, everyone can add or remove content and easily create a website which contains just the elements they wish to add to their setting. Deep knowledge of web design is not a requirement; it&#8217;s all text-based markup, not xml.</p>
 </li>
 <li>
-<p><a href="http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/">AsciiDoc Quick Reference</a></p>
+<p>Expandability. If someone has a wiz-bang new community suppliment to add to the pile, a Pull Request can get it merged into the central repository. But even if the Pull Request gets rejected, it still exists in thier fork. It&#8217;s simply a better sharing model than forum posts, all the way around.</p>
 </li>
 <li>
-<p><a href="http://asciidoctor.org">Asciidoctor</a></p>
+<p>Ultra-portablility. Anyone can clone the website, stick it on a thumbdrive, and view it on a plane, or in the middle of the Sahara, or whereever. A copy can be placed on any webserver, anywhere.</p>
+</li>
+<li>
+<p>Durable. If Github crashes tomorrow and never returns, the entire contents of the repository still exist in every clone. The website can always be restored so long as one clone exists.</p>
 </li>
 </ul>
-</div>
 </div>
 </div>
 </div>
@@ -211,7 +163,7 @@
         <hr>
         <div class="row">
             <div class="large-12 columns">
-                <p>Footer</p>
+                <p>To each his own.</p>
             </div>
         </div>
     </div>
@@ -219,6 +171,7 @@
 
 <script src="js/vendor/jquery.js"></script>
 <script src="js/foundation.min.js"></script>
+<script src="js/toc.js"></script>
 <script>
 $(document).foundation();
 var doc = document.documentElement;

@@ -1,0 +1,213 @@
+<!doctype html>
+<!--[if IE 9]>
+<html class="lt-ie10" lang="en"> <![endif]-->
+<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools</title>
+    <meta name="description" content="Explanation of the tools used for this site.">
+    <meta name="author" content="Your name goes here">
+    <meta name="copyright" content="Maybe consider a Creative Commons license">
+    <link rel="stylesheet" href="css/foundation.css">
+    <!-- <link rel="stylesheet" href="css/font-awesome.css"> -->
+    <link rel="stylesheet" href="css/coderay.css">
+    <link rel="stylesheet" href="css/asciidoctor.css">
+    <link rel="stylesheet" href="css/gen.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="js/vendor/modernizr.js"></script>
+</head>
+<body>
+
+
+<!-- Nav Bar -->
+
+<nav class="top-bar" data-topbar>
+    <ul class="title-area">
+        <!-- Title Area -->
+        <li class="name">
+            <h1>
+                <a href="">= Genesys RPG Asciidoc Compilation</a>
+            </h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns" role="content">
+
+        <h1>Tools</h1>
+<div class="sect1">
+<h2 id="what_is_this_witchcraft">What is this witchcraft!?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For someone coming to this without any prior experience, this might seem a bit bewildering, and this is an attempt to explain the tooling and the logic behind using it.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="the_problem">The problem</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Word processing tools have been around for a while. People use them for all sorts of documents, and they have become a staple of our lives. But in truth, it&#8217;s rarely the right answer to use one. If a project is small, it isn&#8217;t worth the effort to use a word processor. Beyond a certain point, using a word processor becomes a massive burden. There&#8217;s really no sweet spot in the middle, either; the mid-range activities usually have specialized tools.</p>
+</div>
+<div class="paragraph">
+<p>But the problem is deeper than that. Word processors are dumb. By that, I mean that they don&#8217;t understand the semantic significance of the content; those details are ignored in favor of formatting. But! They fail miserably at formatting as well. Partially, this is because the semantic significance is ignored, partially this is because the formatting tools they present are inadequate, and partially it is because word processor documents are not stored in a way that preserves formatting; desktop publishing applications do that, but word processors do not.</p>
+</div>
+<div class="paragraph">
+<p>In short, the only time word processors can possibly be the right tool for the task is <em>when you don&#8217;t understand the task.</em></p>
+</div>
+<div class="paragraph">
+<p>At the opposite end of the spectrum, there&#8217;s LaTeX. It&#8217;s incredibly potent, but also incredibly painful. There&#8217;s so much to learn! That&#8217;s too much cognitive burden for the average person to be expected to shoulder.</p>
+</div>
+<div class="paragraph">
+<p>There has to be a middle-ground. There has to be a place where the falling angel meets the rising ape.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="the_solution">The solution</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Enter Asciidoc. Asciidoc is just a markup language. You write in plain text and put simple symbols in place to provide semantic meaning. "This is a title. This is a paragraph. This is a table, and here&#8217;s the contents of the table cells." Then the Asciidoc toolchain converts that into something pretty.</p>
+</div>
+<div class="paragraph">
+<p>Simple, right?</p>
+</div>
+<div class="paragraph">
+<p>Well, yes and no. A lot of internal things happen between the time when the unicorn eats magic grass and when it poops out rainbow ice-cream swirls.</p>
+</div>
+<div class="sect2">
+<h3 id="the_unicorn_digestive_system">The Unicorn Digestive System</h3>
+<div class="paragraph">
+<p>My goal here is to describe a clear path from "I like this, how do I do it?" to "Hey, this works!" that will work no matter which operating system you use. A "clear path" to me means that there are no forks in the road and no stones to poke your feet as you go. I&#8217;ll do my best, but no promises.</p>
+</div>
+<div class="paragraph">
+<p>There are a few implementations of Asciidoc out there, but <em>we&#8217;re trying to publish to Github,</em> and Github uses Asciidoctor. Asciidoctor is written in Ruby. In fact, Ruby is the language that all of the tooling is written in, and so you need to install the Ruby interpreter. Different operating systems have different installation procedures, so find the right instructions for you on the <a href="https://www.ruby-lang.org/en/downloads/">Ruby website.</a> It&#8217;s not hard to install.</p>
+</div>
+<div class="paragraph">
+<p>You&#8217;ll want a good text editor. I use Visual Studio Code for a number of reasons, and I suggest that you do, too. Unless you know what you&#8217;re doing already. But then, why would you be <em>here?</em> So use <a href="https://code.visualstudio.com/download">Visual Studio Code</a>.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s technically possible to download a zip file of a Github repository, but that limits you in <em>so many ways.</em> Do yourself a favor and learn enough <a href="https://git-scm.com/download/">Git</a> to get by. There are a bunch of good GUIs to make it simple, and Visual Studio Code is one of them. Teaching Git is beyond the scope for this document, but there are tons of resources. Here&#8217;s my favorite: <a href="https://git-scm.com/book/en/v2">Pro Git</a>.</p>
+</div>
+<div class="paragraph">
+<p>So now for some unicorn guts:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open a commandline which has ruby in the path. It&#8217;s straightforward on Linux and Mac; any commandline should have ruby in the path at this point. On windows, hit Start and type <code>Start Command Prompt with Ruby</code>.</p>
+</li>
+<li>
+<p>Install bundle, jekyll, and jekyll-asciidoc with the command, <code>gem install bundle jekyll jekyll-asciidoc</code></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>At this point, you&#8217;re ready to poop rainbow ice cream. But what did we just do? Well, we installed some tools to help us run a copy of the website on our local computer. <code>gem</code> is a package manager for Ruby. It fetches packages and installs them when you run <code>gem install</code>. We told gem to install <code>bundle</code>, another package manager that, instead of working on the whole system, "bundles" all the stuff you need for your current project and makes everything portable. (That&#8217;s an oversimplification, but eh, close enough.) <code>jekyll</code> is a package that manages all the plumbing required to turn markup to html. <code>jekyll-asciidoc</code> adds the asciidoc flavor of markup to jekyll. (By default, jekyll knows a flavor of markup called "markdown." It still does; you can add a .md file and jekyll will poop out very similar ice cream.) <code>gem</code> truly <em>is</em> outrageous; she knows how to find all the other unicorn guts you need. One of those things is <code>asciidoctor</code>. Asciidoctor actually handles turning the asciidoc files to html. jekyll really acts more like a traffic light, telling all the other tools when to go.</p>
+</div>
+<div class="paragraph">
+<p>So get the repository for the site. Use <code>git clone</code> from your own fork, unless you&#8217;re just browsing. (More on why later.)</p>
+</div>
+<div class="paragraph">
+<p>With a Ruby-enabled command prompt (see above), cd to the directory where you&#8217;ve put the repository. Then run <code>bundle exec jekyll serve</code>. That tells bundle to make sure all the necessary tools are in the right spot, and then run jekyll, telling jekyll to serve up a local webserver for the site on port 4000. You can browse to <a href="http://localhost:4000" class="bare">http://localhost:4000</a> or <a href="http://127.0.0.1:4000" class="bare">http://127.0.0.1:4000</a> (your local computer) and see what&#8217;s being served! It&#8217;s rainbow ice cream! How did that get there? Oh wait&#8230;&#8203; now we know. Ewww.</p>
+</div>
+<div class="paragraph">
+<p>Why fork the Github repository and <em>then</em> clone? Because that way, you can push your changes back to your fork. Once you&#8217;re happy with all your changes and they look right on your fork, you can create a Pull Request (PR.) That lets me know that there&#8217;s something to consider merging in with the website.</p>
+</div>
+<div class="sect3">
+<h4 id="back_to_the_rainbow_ice_cream_poop">Back to the rainbow ice cream poop</h4>
+<div class="paragraph">
+<p>Github understands Asciidoc. But it doesn&#8217;t understand the entire rainbow; it really only understands a "Neopolitan" amount of Asciidoc features. One of the most essential features of Asciidoc is missing: the <code>include:</code> macro. We make extended use of it, so it&#8217;s simply not optional in our case. So, if we want Github to show the entire rainbow of goodness, we have to create our own rainbow ice cream and tell Github to use our ice cream instead.</p>
+</div>
+<div class="paragraph">
+<p>To do that, we use a different unicorn: Travis CI. Travis CI, takes our ice cream formula, runs it through its own digestive tract, and poops out ice cream into Github&#8217;s ice cream cone. To put it a little less (ahem) colorfully, we use Travis CI, an external build host, to build the html output and commit it to the gh-pages branch of our fork on Github. And <em>that&#8217;s</em> how our page shows up on github.io.</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s a lot of magic, and it&#8217;s all optional. We can skip all the automation if we want, simply by taking our local <code>_site</code> directory contents and committing them to the <code>gh-pages</code> branch, and pushing that branch up to Github. Because when you pull back the curtain and look, that&#8217;s exactly what Travis CI does for us.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="reference_documentation">Reference documentation</h3>
+<div class="paragraph">
+<p>The following links will help with detailed explanations on Jekyll and AsciiDoc.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://jekyllrb.com">Jekyll</a></p>
+</li>
+<li>
+<p><a href="http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/">AsciiDoc Quick Reference</a></p>
+</li>
+<li>
+<p><a href="http://asciidoctor.org">Asciidoctor</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+    </div>
+
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+
+    <aside class="large-3 columns">
+
+        <h4>Posts</h4>
+        <ul id="posts" class="posts nav">
+            
+            <li><a href="./2015/01/01/first-entry.html">First Entry</a></li>
+            
+        </ul>
+
+        <div class="panel">
+            <h5>Featured</h5>
+
+            <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon
+                nulla pork belly cupidatat meatloaf cow.</p>
+        </div>
+
+    </aside>
+
+    <!-- End Sidebar -->
+</div>
+
+<!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+
+<footer class="row">
+    <div class="large-12 columns">
+        <hr>
+        <div class="row">
+            <div class="large-12 columns">
+                <p>To each his own.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/foundation.min.js"></script>
+<script src="js/toc.js"></script>
+<script>
+$(document).foundation();
+var doc = document.documentElement;
+doc.setAttribute('data-useragent', navigator.userAgent);
+</script>
+</body>
+</html>
