@@ -1,41 +1,43 @@
-= Congratulations!
+= Asciidoc Supplement Compilation For the Genesys Roleplaying System 
 :showtitle:
-:page-title: Jekyll AsciiDoc Quickstart
-:page-description: A forkable blog-ready Jekyll site using AsciiDoc
+:page-title: Genesys Asciidoc Tooling
+:page-description: A site using AsciiDoc to generate Genesys suppliments.
 
-You've successfully set up and deployed an Jekyll website powered by AsciiDoc using the https://github.com/asciidoctor/jekyll-asciidoc-quickstart[*Jekyll AsciiDoc Quickstart*] project. If everything is in order then changes to the AsciiDoc content will be automatically published to your `gh_pages` branch and hosted via Jekyll and Github.
+Greetings, Traveller! You're here for one of two reasons:
 
-== What do I do now?
+. you want to use some of the content in this website in your Genesys game, or
+. you want to get your own content added to the compilation.
 
-Now that you've set up your website to run with AsciiDoc, you have a ton of options available to you.
+Either way, we've got you covered! Read on.
 
-=== Edit content
+== How can I use this content?
 
-Editing content is very simple. The easiest way to update your blog is to clone your repository, fire up your favorite text editor and run the content locally. To do this run the `jekyll serve` command and open a web browser to http://localhost:4000. Jekyll will automatically process and host changes to the content.
+Game rules aren't copyrightable, per se. However, the wording of those rules can be. Even when copyright is involved, there's Fair Use. But we also don't want to step on Fantasy Flight Games' toes. Therefore, we're making some reasonable assumptions. 
 
-You may also edit your content directly on Github. To do this, navigate the browser the file you wish to edit, click the pensil (edit) button in the upper right hand corner of the view and make your changes. When you're finished, commit your changes. This will trigger Travis to generate and publish a new website including your changes.
+The first is that Fantasy Flight Games is allowing the community to use whatever is posted on or linked in their forums for non-commercial use. The logic is this: if it's on their formums or linked on their forums, they are fully aware of it. They have the capacity to take down anything on their forums, and to send C&D requests to anything linked on their forums.
 
-For blog posts, Jekyll will recognize files under the `_post` directory, parse the name and place it in the list of posts. These will show up under the `site.posts` variable.
+The second is that you are using the content for non-commercial use, unless the content is specifically listed with a license that permits otherwise. Where there is an explicit license attached to content, we will specify.
 
-To display a list of posts, use Jekyll syntax similar to the following:
+In a nutshell, we intend to honor the established (if unwritten) policies regarding community content, and to not violate copyrights. And in turn, that means as long as you do the same, everything should be golden. Until there _is_ written guidance, we're proceeding with the understanding that anything that causes community growth without impacting FFG's ability to make money from their product is highly (if implicitly) encouraged by them. This is congruent with the precedent FFG has set.
 
-[source, html]
-----
-{% for post in site.posts limit: 5 %}
-<a href=".{{ post.url }}">{{ post.navtitle }}</a>
-{% endfor %}
-----
+== Super! What goodies have you got?
 
-=== Update Look and feel
+Glad you asked! 
 
-The layout provided with the https://github.com/asciidoctor/jekyll-asciidoc-quickstart[Jekyll AsciiDoc Quickstart] project is based on http://foundation.zurb.com[Foundation], a responsive design css framework. You're free to update the layout by editing the `_layouts/default.html` file and css under the `css` directory.
+link:genesys-setting-conversion-etu.html[East Texas University Setting Conversion Kit]
 
-//This blog layout is based on the http://foundation.zurb.com/templates-previews-sites-f6/blog.html[Blog template].
+link:genesys-kit-modern.html[Genesys Modern Kit]
 
-=== Reference documentation
+link:genesys-kit-encumbrance.html[Genesys Encumbrance Expansion Kit]
 
-The following links will help with detailed explanations on Jekyll and AsciiDoc.
+== What Is This Witchcraft!? (And how do I get some of it?)
 
-* http://jekyllrb.com[Jekyll]
-* http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[AsciiDoc Quick Reference]
-* http://asciidoctor.org[Asciidoctor]
+link:tools.html[This handy link] explains the "how," but here's the "why:" 
+
+* Ease. Using this repository, everyone can add or remove content and easily create a website which contains just the elements they wish to add to their setting. Deep knowledge of web design is not a requirement; it's all text-based markup, not xml. 
+
+* Expandability. If someone has a wiz-bang new community suppliment to add to the pile, a Pull Request can get it merged into the central repository. But even if the Pull Request gets rejected, it still exists in thier fork. It's simply a better sharing model than forum posts, all the way around.
+
+* Ultra-portablility. Anyone can clone the website, stick it on a thumbdrive, and view it on a plane, or in the middle of the Sahara, or whereever. A copy can be placed on any webserver, anywhere.
+
+* Durable. If Github crashes tomorrow and never returns, the entire contents of the repository still exist in every clone. The website can always be restored so long as one clone exists.

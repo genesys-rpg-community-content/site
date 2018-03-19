@@ -1,0 +1,157 @@
+= East Texas University Setting Conversion Kit
+:showtitle:
+:page-title: East Texas University Setting Conversion Kit
+:page-description: East Texas University Setting Conversion Kit
+:imagesdir: images
+
+include::_include-symbols.adoc[]
+
+
+.Greek Name
+[.genesys, width="50%",cols="^s,^m",frame="topbot",options="header"]
+|===============
+|% Roll  |Result
+|01-04       |Alpha
+|05-08       |Beta  
+|09-12       |Gamma
+|13-16       |Delta  
+|17-20       |Epsilon  
+|21-24       |Zeta  
+|25-28       |Eta  
+|29-32       |Theta  
+|33-36       |Iota  
+|37-40       |Kappa  
+|41-44       |Lambda  
+|45-48       |Mu  
+|49-52       |Nu  
+|53-56       |Xi
+|57-60       |Omicron
+|61-64       |Pi
+|65-68       |Rho
+|69-72       |Sigma
+|73-76       |Tau
+|77-80       |Upsilon
+|81-84       |Phi
+|85-88       |Chi
+|89-92       |Psi
+|93-96       |Omega
+|97-00       |Roll again; The organization is a Secret Society.
+|===============
+
+.Type of Organization
+[.genesys, width="100%",cols="^2,8",frame="topbot",options="header"]
+|===============
+|% Roll  |Result
+|01-12       |*Community Service:* Dedicated to helping various charities.
+|13-24       |*Social Club:* Dedicated to making friends and connections.
+|25-48       |*Athletic:* Dedicated to athletics and the betterment of physical skill.
+|49-60       |*Professional Development:* Dedicated to making contacts.
+|61-72       |*Elite Social Club:* Family connections.
+|73-84       |Political: Dedicated to making legal and political connections.
+|85-88       |*Cultural:* Dedicated to furthering the love and understanding of distinct cultures.
+|89-00       |*Secret Society:* The group is extremely private and created to serve some secret goal, such as ensuring the individual members’ success in the real world after graduation.
+|===============
+
+.Cursed Effects Table
+[.genesys, width="100%",cols="^2,8",frame="topbot",options="header"]
+|===============
+|% Roll  |Result
+|===============
+
+.Hand Weapons
+[.genesys, options="header"]
+|===============
+|Name  |Skill |Dam |Crit |Range |Encum|Price|Rarity|Special
+|*Axe, Fireman’s*| Melee|+3|5 |Engaged ||$75|3 |--
+|*Axe, Hatchet*| Melee|+2|5 |Engaged ||$20|3 |--
+|*Chainsaw, Small:* Up to 14” blades|Melee | | | | |$100|2|
+Notes: A natural 1 on the Fighting die (regardless of the Wild Die) hits the user instead.
+|*Club, Light* (Stick, table leg)|Melee | | | | | — | -- |
+|*Club, Heavy* (metal baseball bat, hockey stick) |Melee | | | | |$20||
+|*Hammer, Claw*|Melee | | | | | $10||
+|*Hammer, Sledge* |Melee | | | | |$30||
+|*Katana* (non-authentic, found in souvenir stores) |Melee | | | | |$80||
+|*Knife, Butcher* |Melee | | | | |$20||
+|*Knife, Small* (switchblade, pocket, or steak knife)|Melee | | | | | $10||
+|*Nail Gun, Cordless*|Melee | | | | | $200||
+|*Weed Whacker* / Trimmer (Nonlethal damage)|Melee | | | | |$30||
+|*Wooden Stake* |Melee | | | | |--||
+|===============
+
+.Personal Defense Devices
+[.genesys, options="header"]
+|===============
+|Name  |Skill |Dam |Crit |Range |Encum|Price|Rarity|Special
+|*Pepper Spray* |Short | | | | |$10||
+|*Taser* |Short | | | | |$150||
+|*Stun Gun* |Melee | | | | |$100||
+|===============
+
+.Pistols
+[.genesys, options="header"]
+|===============
+|Name  |Skill |Dam |Crit |Range |Encum|Price|Rarity|Special
+|*Colt 1911 (.45)*|Short | | | | |$900||
+|*S&W (.44)*|Short | | | | |$800||
+|*Desert Eagle (.50)*|Short | | | | |$1200||
+|*Glock (9mm)*|Short | | | | |$500||
+|*Peacemaker (.45)*|Short | | | | |$1400||
+|*Ruger (.22)*|Short | | | | |$300||
+|*S&W (.357)*|Short | | | | |$700||
+|===============
+
+.Bows/Crossbows
+[.genesys, options="header"]
+|===============
+|Name  |Skill |Dam |Crit |Range |Encum|Price|Rarity|Special
+|*Compound Bow*|Medium | | | | |$350||
+|*Crossbow*|Long | | | | |$700||
+|===============
+
+.Shotguns
+[.genesys, options="header"]
+|===============
+|Name  |Skill |Dam |Crit |Range |Encum|Price|Rarity|Special
+|*Double-Barrel (12g)*|Medium | | | | |$450||
+|*Pump Action (12g)*|Medium | | | | |$325||
+|*Sawed-Off DB (12g)*|Short | | | | |$275||
+|===============
+
+.Rifles
+[.genesys, options="header"]
+|===============
+|Name  |Skill |Dam |Crit |Range |Encum|Price|Rarity|Special
+|*.30–06* |Extreme | | | | |$550||
+|*.22 Rifle* |Long | | | | |$225||
+|*Marlin 1895* |Long | | | | |$500||
+|===============
+
+.Assault Rifles
+[.genesys, options="header"]
+|===============
+|Name  |Skill |Dam |Crit |Range |Encum|Price|Rarity|Special
+|*AK47 (7.62)* |Extreme | | | | |$600||
+|*M-16 (5.56)* |Extreme | | | | |$1000||
+|===============
+
+
+.Used Car Glitches
+[.genesys, width="100%",cols="^2,8",frame="topbot",options="header"]
+|===============
+|% Roll  |Result
+|01-12       |*Hard to Crank:* When it’s important, the hero must make a *Hard ({difficulty}{difficulty}{difficulty}) Driving (Agility)* check to get the car started—just like in every horror flick ever made.
+|13-24       |*Slick Rires:* The tires are balder than Captain Picard, inflicting a –1 Handling modifier.
+|25-48       |*Engine Misses:* Performing the Accelerate maneuver requires an *Average ({difficulty}{difficulty}) Driving(Agility)* check if the speed increase is greater than 1. The difficulty is upgraded once per speed increase beyond 1.
+|49-60       |*Gas Guzzler:* The vehicle requires an additional $20 a week in fuel.
+|61-72       |*Engine Leaks:* The car dribbles oil, costing an extra $20 each semester to keep running.
+|73-84       |*Engine Overheats:* The car leaks coolant and heats up fast. Any time the driver fails a Driving roll the car starts to sputter and steam. The engine shuts down 1d6 minutes later and requires more coolant (about $10 per use).
+|85-88       |*Loud Muffler:* The vehicle can be heard coming a mile away.
+|89-00       |*Pulls to the Left:* The tires just never align right. Upgrade the difficulty of all Driving(Agility) checks once.
+|89-00       |*A Few Horses Shy:* Reduce Max Speed by 1.
+|89-00       |*Doppelganger:* Somebody has a similar vehicle and they’re always up to no good.
+|89-00       |*Jealous Bitch:* The vehicle seems to have an affinity with its owner. Other drivers suffer a {Setback}{Setback} penalty when driving it.
+|89-00       |*Lead Foot:* Now and then the engine revs all on its own. At the Dean’s discretion, the car increases its current speed by 2 for 1d4 rounds or until the driver slams on the brakes (a  Dangerous Driving action).
+|89-00       |*Gremlins:* The vehicle’s electrical system goes on and off at random—but only when it seems to matter most. Headlights go out, the radio comes on at full volume at the worst possible moment, etc.
+|89-00       |*Possessed:* The vehicle acts like it’s inhabited by a full-on entity of some sort. Those who believe in such things say it’s a demon or the spirit of the former owner who died within. It’s the Dean’s call how real this is.
+|===============
+

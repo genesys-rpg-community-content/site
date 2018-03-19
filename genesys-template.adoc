@@ -1,0 +1,134 @@
+= Genesys Setting Template
+James Gilmore
+:toc:
+:imagesdir: images
+
+include::_include-symbols.adoc[]
+
+
+== Purpose
+
+This is a template for creating Genesys settings using Asciidoc. 
+
+
+== Dice
+
+I have a dicey proposition. *Formidable({difficulty}{difficulty}{difficulty}{difficulty}{difficulty})*
+
+Don't {threat}{threat} me, _pal!_
+
+{challenge}{proficiency}{ability}{difficulty}{boost}{setback}
+{despair}{failure}{threat}{advantage}{success}{triumph}
+
+== Equipment
+
+.ARMOR
+[cols="3,1,1,1,1,1",options="header"]
+|===
+| NAME | DEFENSE | SOAK | ENCUMBRANCE | PRICE | RARITY 
+
+| Sackcloth | 0 | 1 | 1 | 1 | 1 
+| Linen | 0 | 1 | 1 | 1 | 1 
+
+|===
+
+.WEAPONS
+[cols="4,1,1,1,1,1,1,1,3",options="header"]
+|===
+
+| NAME | SKILL | DAM | CRIT | RANGE | ENCUM | PRICE | RARITY | Special
+
+9+| MELEE  
+| Fists o' Fury | Melee | +1 | 9 | Engaged | -- | -- | -- | --
+9+| RANGED 
+| Turbo Funkulator | Ranged (Heavy) | 9001 | 1 | Long | 13 | 42 | 6 | Disorient 5
+| WingDoodler | Ranged (Light) | 4 | 4 | Medium | 2 | 50 | 2 | --
+
+|===
+
+.GEAR
+[cols="3,1,1,1",options="header"]
+|===
+| ITEM | ENCUMBRANCE | PRICE | RARITY 
+
+| Rubber Hose | 1 | 10 | 1 
+| Deodorant | 1 | 5 | 1 
+
+|===
+
+.Table Formatting
+****
+I didn't see any center justified entries in the Core Book. But: Asciidoc _does_ support that.
+****
+
+== Vehicles
+
+=== Starship Jefferson
+We built this city. 
+
+:silhouette: 3
+:maxspeed: 4
+:handling: +3
+:ssthreshold: 25
+:htthreshold: 26
+:armor: 4
+:defense: 2
+
+include::vehicleblock.adoc[] 
+
+*Rock and Roll:* There's only one way to do it. Add {boost}{boost} to all Drive checks when AC/DC is jamming on the radio.
+
+== NPCs
+=== Minion/Rival
+==== Average Joe
+Average Joes come in all shapes and sizes.
+
+:brawn: 1
+:agility: 2
+:intellect: 2
+:cunning: 3
+:willpower: 2
+:presence: 3
+:soakvalue: 3
+:woundthreshold: 8
+:meleedefense: 1
+:rangeddefense: 1
+include::minionrivalblock.adoc[]
+*Love Me:* Minions have feelings too!
+
+=== Nemesis
+==== The Jerk That Runs the Joint
+
+This is your Big Bad.
+
+:brawn: 3
+:agility: 5
+:intellect: 3
+:cunning: 4
+:willpower: 3
+:presence: 4
+:soakvalue: 4
+:woundthreshold: 12
+:strainthreshold: 12
+:meleedefense: 3
+:rangeddefense: 2
+include::nemesisblock.adoc[]
+*The Big Bad Special:* A barbedwire-wrapped baseball bat. (Or whatever.)
+
+=== Archetype/Species
+Hey! Don't stereotype me!
+
+==== Species Abilities
+
+:brawn: 2
+:agility: 2
+:intellect: 2
+:cunning: 2
+:willpower: 2
+:presence: 2
+include::characteristicblock.adoc[]
+
+* *Somthing Special:* Some special species thing here.
+* *Some Other Thing:* Some other thing here.
+
+

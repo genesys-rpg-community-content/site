@@ -1,13 +1,33 @@
-= Jekyll AsciiDoc Quickstart
+= The Genesys Roleplaying System Asciidoc Suppliment Compilation README
 :toc:
 
-The Jekyll AsciiDoc Quickstart project is a leg-up in starting your own website hosted on GitHub with content based in AsciiDoc.  This project combines the power of AsciiDoc with a beautiful CSS framework and blog-ready template on top of GitHub's existing publishing infrastructure.
+== How can I contribute? Can I add my own content?
 
-== Directions
+We'd _love_ to have your help, and the beautiful thing about using Asciidoc is that _anyone can._ It's just text!
+
+Start by forking this repository. That lets you edit the .adoc files right in Github. Once you've made changes, you can submit a pull request to have your changes merged into the repository. And if that's enough to get you where you need to be, great! However, it's much easier to see your results as you're going. For that, you'll need a few tools.
+
+=== Setting up
+
+. You'll need https://www.ruby-lang.org/en/[Ruby.] Ruby is the language that all of the tooling is written in, and so you need to install the Ruby interpreter. Different operating systems have different installation procedures, so find the right instructions for you on the https://www.ruby-lang.org/en/downloads/[Ruby website.]
+
+. You'll also need a good text editor, and Notepad isn't going to cut it. I recommend https://code.visualstudio.com/download[Visual Studio Code]. All the cool kids are using it. Plus, it has a https://github.com/joaompinto/asciidoctor-vscode[nice plugin] that works really well for Asciidoc.
+
+. You'll need https://git-scm.com/download/[Git] installed on your computer. You can also get one of the many git GUIs, or if you installed Visual Studio Code, it has a Git interface built-in.
+
+. Open a commandline which has ruby in the path. It's straightforward on Linux and Mac; any commandline should have ruby in the path at this point. On windows, hit Start and type `Start Command Prompt with Ruby`.
+
+. Install bundle, jekyll, and jekyll-asciidoc with the command, `gem install bundle jekyll jekyll-asciidoc` ("gem" is a package manager for Ruby.)
+
+. At this point, you're ready to clone _your fork_ of the repository. Teaching Git is beyond the scope of this document, but there are tons of resources. Here's my favorite: https://git-scm.com/book/en/v2[Pro Git].
+
+Running a local instance of the site is now easy. To do this, open a commandline, cd to the directory where the local copy of the repository is, run the `bundle exec jekyll serve` command, and open a web browser to http://localhost:4000. Jekyll will automatically process and host changes to the content. So every time you save an .adoc file, Jekyll updates the site hosted at http://localhost:4000; your changes appear when you refresh your browser.
+
+=== Directions for Travis CI
 
 The goal of this procedure set is to configure a Travis CI job to listen for commits on the _master_ branch, automatically run the Jekyll build, and push the generated content to the _gh-pages_ branch.
 
-=== {counter:directions}. Install Minimum Jekyll Requirements
+==== {counter:directions}. Install Minimum Jekyll Requirements
 
 You must install some software to execute commands in subsequent procedures. The Requirements on the http://jekyllrb.com/docs/installation/[Jekyll Installation] page describe how to install both ruby and rubygems.
 
@@ -15,7 +35,7 @@ For yum-based package managers, the command to run is:
 
   $ sudo yum install ruby rubygems
 
-=== {counter:directions}. Install Travis Gem
+==== {counter:directions}. Install Travis Gem
 
 When you install rubygems, you can use the gem internal package management system to install the Travis CI gem. This gem contains--among other things--a command-line tool for easily encrypting GitHub tokens.
 
@@ -23,7 +43,7 @@ Run the following command to install the Travis gem:
 
   $ gem install travis
 
-=== {counter:directions}. Fork this Repository and Clone
+==== {counter:directions}. Fork this Repository and Clone
 
 To create your own copy of this repository, start by clicking the fork button in the upper right corner of the GitHub page.
 
@@ -31,7 +51,7 @@ Next, open a command line window and make a clone of your new repository:
 
   $ git clone https://github.com/YOUR-USERNAME/jekyll-asciidoc-quickstart
 
-=== {counter:directions}. Enable Travis CI
+==== {counter:directions}. Enable Travis CI
 
 Travis CI is configured initially through a browser.
 
@@ -42,7 +62,7 @@ To activate Travis CI for the Repository:
 . Find the Jekyll repository, and turn on the switch.
 . Click on repository settings (next to the switch) and enable “Build only if .travis.yml is present.”
 
-=== {counter:directions}. Generate a GitHub Personal Access Token
+==== {counter:directions}. Generate a GitHub Personal Access Token
 
 Once the repository is activated in Travis, you need a GitHub token to pass into the Travis keytool.
 
@@ -52,7 +72,7 @@ To generate a new personal access token on GitHub:
 . Select the scope _public_repository_, and add a terse description.
 . Confirm and save the settings.
 
-=== {counter:directions}. Encrypt the GitHub Token for Travis CI
+==== {counter:directions}. Encrypt the GitHub Token for Travis CI
 
 With the GitHub token created, you can now pass it to the Travis command-line tool, which adds the encrypted value to a file in your repository.
 
@@ -76,41 +96,19 @@ env:
 
   $ git push
 
-=== {counter:directions}. Verify the Configuration
+==== {counter:directions}. Verify the Configuration
 
 To verify if you have configured the repository correctly, open https://travis-ci.org and verify that Travis starts, and subsequently finishes processing the job.
 
 Travis should place the built site into the _gh-pages_ branch upon completion.
 
-== Summary
+=== Summary
 
-If you can load the `[username].github.io/jekyll-asciidoc-quickstart` home page, you have successfully completed basic configuration.
+If you can load the `[username].github.io/[yourrepository]` home page, you have successfully completed basic configuration.
 
 Start writing blog posts and enjoy the AsciiDoc difference, regardless of what device you choose: computer, tablet, or mobile.
 
-= Details
-
-== GitHub Pages and AsciiDoc
-
-GitHub Pages does not (yet) whitelist the jekyll-asciidoc plug-in, so you can not write `.adoc` posts and have them instantly publish like Markdown posts do.
-
-Unlike some "fork and write" repositories that exist for Markdown blogs, you need to initially configure this repository fork with a computer to publish using AsciiDoc.
-
-=== How We Work Around The Limitation
-
-For this repository, the https://travis-ci.org/[Travis CI] Continuous Integration (CI) server emulates GitHub Pages staging automation, and pushes your blog live upon committing any change to the repository.
-
-After initially configuring the repository, you can use Git command-line on your computer, or even a Git client on your tablet or smartphone to write, commit, and automatically publish blog posts.
-
-=== Help Get AsciiDoc Whitelisted for GitHub Pages
-
-You can help change the lack of native AsciiDoc support by creating a support case through http://github.com/support.
-
-Tell the GitHub team that you want the choice to write in AsciiDoc, and have it handled the same way Markdown is when pushed to your GitHub Page.
-
-Your voice counts: make it heard!
-
-== Repository Structure
+=== Repository Structure
 
 The repository requires the following structure to work correctly:
 

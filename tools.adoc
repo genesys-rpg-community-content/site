@@ -1,0 +1,68 @@
+= Tools
+:showtitle: 
+:page-title: Tools
+:page-description: Explanation of the tools used for this site.
+
+== What is this witchcraft!?
+
+For someone coming to this without any prior experience, this might seem a bit bewildering, and this is an attempt to explain the tooling and the logic behind using it.
+
+== The problem
+
+Word processing tools have been around for a while. People use them for all sorts of documents, and they have become a staple of our lives. But in truth, it's rarely the right answer to use one. If a project is small, it isn't worth the effort to use a word processor. Beyond a certain point, using a word processor becomes a massive burden. There's really no sweet spot in the middle, either; the mid-range activities usually have specialized tools.
+
+But the problem is deeper than that. Word processors are dumb. By that, I mean that they don't understand the semantic significance of the content; those details are ignored in favor of formatting. But! They fail miserably at formatting as well. Partially, this is because the semantic significance is ignored, partially this is because the formatting tools they present are inadequate, and partially it is because word processor documents are not stored in a way that preserves formatting; desktop publishing applications do that, but word processors do not.
+
+In short, the only time word processors can possibly be the right tool for the task is _when you don't understand the task._
+
+At the opposite end of the spectrum, there's LaTeX. It's incredibly potent, but also incredibly painful. There's so much to learn! That's too much cognitive burden for the average person to be expected to shoulder. 
+
+There has to be a middle-ground. There has to be a place where the falling angel meets the rising ape.
+
+== The solution
+
+Enter Asciidoc. Asciidoc is just a markup language. You write in plain text and put simple symbols in place to provide semantic meaning. "This is a title. This is a paragraph. This is a table, and here's the contents of the table cells." Then the Asciidoc toolchain converts that into something pretty.
+
+Simple, right?
+
+Well, yes and no. A lot of internal things happen between the time when the unicorn eats magic grass and when it poops out rainbow ice-cream swirls.
+
+=== The Unicorn Digestive System
+
+My goal here is to describe a clear path from "I like this, how do I do it?" to "Hey, this works!" that will work no matter which operating system you use. A "clear path" to me means that there are no forks in the road and no stones to poke your feet as you go. I'll do my best, but no promises.
+
+There are a few implementations of Asciidoc out there, but _we're trying to publish to Github,_ and Github uses Asciidoctor. Asciidoctor is written in Ruby. In fact, Ruby is the language that all of the tooling is written in, and so you need to install the Ruby interpreter. Different operating systems have different installation procedures, so find the right instructions for you on the https://www.ruby-lang.org/en/downloads/[Ruby website.] It's not hard to install.
+
+You'll want a good text editor. I use Visual Studio Code for a number of reasons, and I suggest that you do, too. Unless you know what you're doing already. But then, why would you be _here?_ So use https://code.visualstudio.com/download[Visual Studio Code].
+
+It's technically possible to download a zip file of a Github repository, but that limits you in _so many ways._ Do yourself a favor and learn enough https://git-scm.com/download/[Git] to get by. There are a bunch of good GUIs to make it simple, and Visual Studio Code is one of them. Teaching Git is beyond the scope for this document, but there are tons of resources. Here's my favorite: https://git-scm.com/book/en/v2[Pro Git].
+
+So now for some unicorn guts:
+
+. Open a commandline which has ruby in the path. It's straightforward on Linux and Mac; any commandline should have ruby in the path at this point. On windows, hit Start and type `Start Command Prompt with Ruby`.
+
+. Install bundle, jekyll, and jekyll-asciidoc with the command, `gem install bundle jekyll jekyll-asciidoc` 
+
+At this point, you're ready to poop rainbow ice cream. But what did we just do? Well, we installed some tools to help us run a copy of the website on our local computer. `gem` is a package manager for Ruby. It fetches packages and installs them when you run `gem install`. We told gem to install `bundle`, another package manager that, instead of working on the whole system, "bundles" all the stuff you need for your current project and makes everything portable. (That's an oversimplification, but eh, close enough.) `jekyll` is a package that manages all the plumbing required to turn markup to html. `jekyll-asciidoc` adds the asciidoc flavor of markup to jekyll. (By default, jekyll knows a flavor of markup called "markdown." It still does; you can add a .md file and jekyll will poop out very similar ice cream.) `gem` truly _is_ outrageous; she knows how to find all the other unicorn guts you need. One of those things is `asciidoctor`. Asciidoctor actually handles turning the asciidoc files to html. jekyll really acts more like a traffic light, telling all the other tools when to go.
+
+So get the repository for the site. Use `git clone` from your own fork, unless you're just browsing. (More on why later.)
+
+With a Ruby-enabled command prompt (see above), cd to the directory where you've put the repository. Then run `bundle exec jekyll serve`. That tells bundle to make sure all the necessary tools are in the right spot, and then run jekyll, telling jekyll to serve up a local webserver for the site on port 4000. You can browse to http://localhost:4000 or http://127.0.0.1:4000 (your local computer) and see what's being served! It's rainbow ice cream! How did that get there? Oh wait... now we know. Ewww.
+
+Why fork the Github repository and _then_ clone? Because that way, you can push your changes back to your fork. Once you're happy with all your changes and they look right on your fork, you can create a Pull Request (PR.) That lets me know that there's something to consider merging in with the website.
+
+==== Back to the rainbow ice cream poop 
+
+Github understands Asciidoc. But it doesn't understand the entire rainbow; it really only understands a "Neopolitan" amount of Asciidoc features. One of the most essential features of Asciidoc is missing: the `include:` macro. We make extended use of it, so it's simply not optional in our case. So, if we want Github to show the entire rainbow of goodness, we have to create our own rainbow ice cream and tell Github to use our ice cream instead.
+
+To do that, we use a different unicorn: Travis CI. Travis CI, takes our ice cream formula, runs it through its own digestive tract, and poops out ice cream into Github's ice cream cone. To put it a little less (ahem) colorfully, we use Travis CI, an external build host, to build the html output and commit it to the gh-pages branch of our fork on Github. And _that's_ how our page shows up on github.io. 
+
+That's a lot of magic, and it's all optional. We can skip all the automation if we want, simply by taking our local `_site` directory contents and committing them to the `gh-pages` branch, and pushing that branch up to Github. Because when you pull back the curtain and look, that's exactly what Travis CI does for us.
+
+=== Reference documentation
+
+The following links will help with detailed explanations on Jekyll and AsciiDoc.
+
+* http://jekyllrb.com[Jekyll]
+* http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[AsciiDoc Quick Reference]
+* http://asciidoctor.org[Asciidoctor]

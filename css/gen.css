@@ -1,0 +1,28 @@
+
+/* Tables */
+td.genesys {
+    font-family: 'Crimson Text', serif;
+    font-size:12pt;
+    font-weight:400;
+    text-align:left;
+}
+td.genesys, th.genesys {border: 1px solid gray;}
+table.genesys {overflow:auto;}
+table.genesys tr:nth-child(odd) td {background-color: #E0F4FC;}
+table.genesys thead th {
+    color: white; 
+    background-color: #F69337; 
+  	padding-top: 0.3em;
+    padding-left: 0.5em;
+    text-transform: uppercase;
+}
+table.genesys tbody tr td {  padding: 0.5em;}
+table.genesys thead {display: table-row-group; }
+table.genesys .subheader td {
+    color:white;
+    text-transform:uppercase;
+    padding-bottom:2px;
+    background-color: #2D4864 !important;
+    font-size:10pt;
+    font-weight:bold;
+    }
