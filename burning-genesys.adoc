@@ -1,0 +1,33 @@
+= Burning Genesys: Hacking Genesys and Burning Wheel.
+:showtitle:
+:page-title: Burning Genesys
+:page-description: Using Burning Wheel's best features with the Genesys RPG System.
+:toc:
+:imagesdir: images
+
+include::_include-symbols.adoc[]
+
+== Why
+
+I love Burning Wheel. There's a depth of play in Burning Wheel that doesn't occur in other games. But it's heavy and obtuse. The subsystems are "optional," but not modular. Which means, as soon as you start pulling the thread to introduce one subsystem, you end up having to pull in several or all of them. This is frustrating, especially when trying to introduce new players.
+
+
+I also love Genesys. The narrative dice system is very fun. Genesys is very modular. But it's got a couple of things about it that I could do without. I'm not keen on the idea of XP for advancement. It works, but it doesn't work _well._ And I'm not thrilled with the implementation of Character Motivation. It's ok. It's certainly more robust than Savage Worlds' hindrances. But it's the most important part of a character but it suffers from two fatal flaws: motivations feel a bit canned, and there's no mechanical reward for pursuing motivations.
+
+So we're going to take some features from Burning Wheel to address these two issues.
+
+== Burning Genesys
+
+
+=== Story Points/Artha
+
+The first feature we are porting over is the expenditure of Artha, which are essentially Fate points. In Burning Wheel, Artha comes in three flavors: Fate, Persona, and Deeds. Each are earned in different ways, and have different impacts on the game. For our purposes, we don't need that level of nuance. What we do need is a way to reward PCs that isn't XP.
+
+==== Story Point Modifications
+
+Story Points work mostly the way they work in the Genesys Core Rulebook. They provide a pool of points that all players can pull from to modify dice pools. However, they cannot be used to activate Special Abilities and Talents, nor do they provide Luck and Deus Ex Machina; this is now the domain of Character Points.
+
+==== Character Points
+
+Character Points are carried over from session to session, and are attached to the character. Character Points can be spent to activate Special Abilities and Talents, and as Luck/Deus Ex Machina. Additionally, Character Points can be spent in any way a Story Point can be spent. Only one Character Point can be spent on an action, but spending a Character Point does not count as spending a Story Point: a player may stack a Story Point with a Character Point to upgrade a roll twice, for instance.
+
